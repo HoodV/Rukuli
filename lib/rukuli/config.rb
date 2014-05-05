@@ -62,6 +62,14 @@ module Rukuli
         end
       end
 
+      # Public: turns text recognition feature on and off
+      # Returns nothing
+      def text_recognition=(boolean)
+        return unless [TrueClass, FalseClass].include? boolean.class
+        org.sikuli.basics::Settings.OcrTextSearch = boolean
+        org.sikuli.basics::Settings.OcrTextRead   = boolean
+      end
+
     end
   end
 end
