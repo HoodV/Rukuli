@@ -34,8 +34,13 @@ module Rukuli
     # seconds - Fixnum length of time to show border
     #
     # Returns nothing
-    def highlight(seconds = 1)
+    def highlight(seconds)
       @java_obj.java_send(:highlight, [Java::int], seconds)
+    end
+
+    # Public: toggle highlight
+    def highlight
+      @java_obj.java_send(:highlight)
     end
 
     # Public: the x component of the top, left corner of the Region

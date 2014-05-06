@@ -17,6 +17,8 @@ module Rukuli
       @java_obj = org.sikuli.script::Screen.new()
     end
 
+    # Public: capture region on screen
+    # Returns path to saved capture
     def capture region
       @java_obj.java_send(:capture, [Java::int, Java::int, Java::int, Java::int],
                                     region.x, region.y, region.width, region.height).getFilename()
