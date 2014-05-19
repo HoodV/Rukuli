@@ -70,6 +70,13 @@ module Rukuli
         org.sikuli.basics::Settings.OcrTextRead   = boolean
       end
 
+      # Public: set minimum similiarty of find operations
+      # default minimum similarity is 0.7
+      # Returns nothing
+      def min_similarity=(float)
+        org.sikuli.basics::Settings.MinSimilarity = float
+      end
+
     end
   end
 end
